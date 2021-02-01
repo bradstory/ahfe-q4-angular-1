@@ -1,0 +1,19 @@
+<div *ngFor="let movie of movieList" class="list">
+    <div class="title">
+      <img src="https://image.tmdb.org/t/p/w185/{{ movie.poster_path }}" class="image"[routerLink]="['/movie-list', movie.id]"/>
+      
+      <button>
+        Title: {{ movie.title }}
+      </button>
+      <i class="far fa-heart" (click)="addToFavs(movie)"></i>
+    </div>
+  </div>
+  
+  <!-- <div class="search-result-container" *ngIf="searchQuery">
+    <div class="movie-container" *ngFor="let movie of movieList">
+      <img src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" alt="" />
+      <h1>{{ movie.title }}</h1>
+      <p>{{ movie.overview }}</p>
+    </div>
+  </div> -->
+  

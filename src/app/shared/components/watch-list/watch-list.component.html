@@ -1,0 +1,11 @@
+<div class="movie-container" *ngFor="let movie of watchList">
+    <div class="movie-text">
+        <h1>{{ movie.title }}</h1>
+        <h2>Release Date: {{ movie.release_date }}</h2>
+        <h2>{{ movie.vote_average }}/10</h2>
+        <h3>{{ movie.overview }}</h3>
+    </div>
+    <div class="movie-poster">
+        <img src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" alt="poster">
+    </div>
+</div>

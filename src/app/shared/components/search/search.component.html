@@ -1,0 +1,8 @@
+<div class="container">
+    <label for="city">Search</label>
+    <input type="text" id="search" name="search" required [(ngModel)]="searchQuery"/>
+    <button (click)="searchResults()">Search</button>
+    <!-- routerLink="/search" -->
+  </div>
+  
+  <app-movie-list [movieList]="movieList" [searchQuery]="searchQuery"></app-movie-list>

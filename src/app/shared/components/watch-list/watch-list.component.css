@@ -1,0 +1,24 @@
+.movie-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: solid black 2px;
+    margin: 10px;
+}
+
+.movie-text {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    padding: 20px;
+}
+
+.movie-poster {
+    padding: 20px;
+}
+
+img {
+    width: 200px;
+    height: auto;
+}

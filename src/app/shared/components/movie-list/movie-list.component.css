@@ -1,0 +1,33 @@
+.image {
+    border-radius: 25px;
+    padding:10px;
+}
+*{
+    margin:0;
+    padding:0;
+} 
+
+.list {
+    display:block;
+    justify-content: space-around;
+    align-items: center;
+    border:1px solid rgb(179, 157, 157);
+    border-radius: 20px;
+    margin:10px;
+    
+}
+.title{
+    font-size: large;
+    outline:none;
+    
+    display:flex;
+     justify-content: flex-start;
+}
+button {
+    border:none;
+    background-color: white;
+}
+ i{
+     color:rgb(104, 34, 45);
+     font-size: 190%;
+}
