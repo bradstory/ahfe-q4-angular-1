@@ -10,14 +10,14 @@ import { MoviesService } from '../../services/movies.service';
   styleUrls: ['./movie-list.component.css']
 })
 export class MovieListComponent implements OnInit {
-  listofmovies: Movie[] = [];
+  // listofmovies: Movie[] = [];
   favList: Movie[] = [];
   @Input() searchQuery: string = '';
   @Input() movieList: Movie[] = [];
   constructor(private service: MoviesService, private router: Router) { }
 
   ngOnInit(): void {
-    // this.favList = this.service.getFavs();
+     this.favList = this.service.getFavs();
     // this.service.getMovie().subscribe((data: any) => {
     //   this.listofmovies = data.results;
     //   console.log(this.listofmovies);
@@ -36,5 +36,6 @@ export class MovieListComponent implements OnInit {
       this.service.setFavs(this.favList);
     }
     console.log(this.favList);
+    
   }
 }

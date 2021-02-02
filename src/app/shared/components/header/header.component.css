@@ -4,7 +4,7 @@ header {
     background-color: rgb(243, 165, 243);
     background-image: linear-gradient(to right, rgb(255, 0, 191) , rgb(0, 225, 255));
     width: 100%;
-    position: fixed;
+    /* position: fixed; */
      
  }
 h1 {

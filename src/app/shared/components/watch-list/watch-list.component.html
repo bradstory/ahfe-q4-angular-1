@@ -1,4 +1,4 @@
-<div class="movie-container" *ngFor="let movie of watchList">
+<div class="movie-container" *ngFor="let movie of masterFavList">
     <div class="movie-text">
         <h1>{{ movie.title }}</h1>
         <h2>Release Date: {{ movie.release_date }}</h2>
@@ -8,4 +8,7 @@
     <div class="movie-poster">
         <img src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" alt="poster">
     </div>
+
+    <button><i class="fas fa-trash-alt" (click)= "removeMovie(movie)"></i></button>
+
 </div>
