@@ -1,19 +1,11 @@
-<div *ngFor="let movie of movieList" class="list">
-    <div class="title">
-      <img src="https://image.tmdb.org/t/p/w185/{{ movie.poster_path }}" class="image"[routerLink]="['/movie-list', movie.id]"/>
-      
-      <button>
-        Title: {{ movie.title }}
-      </button>
-      <i class="far fa-heart" (click)="addToFavs(movie)"></i>
-    </div>
+<div class="movie-container" *ngFor="let movie of movieList">
+  <div class="movie-text">
+    <h1 class="title">{{ movie.title }}</h1>
+    <h2 class="release-date">Release Date: {{ movie.release_date }}</h2>
+    <h2 class="rating">Rating: {{ movie.vote_average }}/10</h2>
+    <i class="far fa-heart" (click)="addToFavs(movie)"></i>
   </div>
-  
-  <!-- <div class="search-result-container" *ngIf="searchQuery">
-    <div class="movie-container" *ngFor="let movie of movieList">
-      <img src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" alt="" />
-      <h1>{{ movie.title }}</h1>
-      <p>{{ movie.overview }}</p>
-    </div>
-  </div> -->
-  
+  <div class="movie-poster">
+    <img src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" alt="poster" [routerLink]="['/movie-list', movie.id]">
+  </div>
+</div>

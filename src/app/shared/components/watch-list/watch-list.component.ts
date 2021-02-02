@@ -10,35 +10,21 @@ import { MoviesService } from '../../services/movies.service';
 export class WatchListComponent implements OnInit {
 
   constructor(private service: MoviesService) { }
-  watchList: Movie[] = [];
+  masterFavList: Movie[] = [];
 
   ngOnInit(): void {
-    this.watchList = this.service.getFavs();
-    // this.service.getMovie().subscribe((data: any) => {
-    //   for (let obj of data.results) {
-    //     let newMovie: Movie = {
-    //       title: obj.title,
-    //       overview: obj.overview,
-    //       poster_path: obj.poster_path,
-    //       rating: obj.rating,
-    //       release_date: obj.release_date,
-    //       vote_average: obj.vote_average,
-    //       id: obj.id,
-    //       runtime: obj.runtime,
-    //       tagline: obj.tagline,
-    //       backdrop_path: obj.backdrop_path,
-    //     };
-    //     this.watchList.push(newMovie);
-    //   }
-    console.log(this.watchList);
-    // });
-
-    // title: string;
-    // overview: string;
-    // poster: string;
-    // rating: number;
-    // voteAverage: number;
-    // id: number;
+    this.masterFavList = this.service.getFavs();
+    
+    console.log(this.masterFavList);
+    
   }
+
+
+  removeMovie(movie: Movie) {
+    let index =this.masterFavList.findIndex((fav: Movie) => fav.id === movie.id);
+ 
+    this.masterFavList.splice(index,1);
+  }
+
 
 }

@@ -1,11 +1,11 @@
-<div class="movie-container" *ngFor="let movie of watchList">
+<div class="movie-container" *ngFor="let movie of masterFavList">
     <div class="movie-text">
-        <h1>{{ movie.title }}</h1>
-        <h2>Release Date: {{ movie.release_date }}</h2>
-        <h2>{{ movie.vote_average }}/10</h2>
-        <h3>{{ movie.overview }}</h3>
+        <h1 class="title">{{ movie.title }}</h1>
+        <h2 class="release-date">Release Date: {{ movie.release_date }}</h2>
+        <h2 class="rating">Rating: {{ movie.vote_average }}/10</h2>
+        <i class="fas fa-trash-alt" (click)= "removeMovie(movie)"></i>
     </div>
     <div class="movie-poster">
-        <img src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" alt="poster">
+        <img src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" alt="poster" [routerLink]="['/movie-list', movie.id]">
     </div>
 </div>
