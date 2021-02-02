@@ -9,6 +9,7 @@ import { MoviesService } from '../../services/movies.service';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
+  @Output() rating: string = '';
   @Output() year: string = '';
   @Output() searchQuery: string = '';
   results: any;
@@ -20,8 +21,6 @@ export class SearchComponent implements OnInit {
     this.service.searchMovies(this.searchQuery).subscribe((data: any) => {
       this.movieList = data['results'];
       console.log(this.movieList);
-      
-
     });
   }
 
@@ -31,7 +30,12 @@ export class SearchComponent implements OnInit {
     })
   }
   
-
+  ratingSearch() {
+    this.service.searchRating(this.rating).subscribe((data:any) => {
+      this.movieList = data['results'];
+    })
+  }
+  
 
 
   ngOnInit(): void {

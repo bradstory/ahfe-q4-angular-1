@@ -1,13 +1,18 @@
 <div class="container">
-    <label for="search">Search by Title: </label>
+    <label for="search">Title: </label>
     <input type="text" id="search" name="search" required [(ngModel)]="searchQuery"/>
     <button (click)="searchResults()">Search</button>
     <!-- routerLink="/search" -->
   </div>
   <div class="container">
-    <label for="year">Search by Release Year: </label>
+    <label for="year">Release Year: </label>
     <input type="number" id="year" name="year" placeholder="" required [(ngModel)]="year">
     <button (click)="searchByYear()">Search</button>
   </div>
+  <div class="container">
+    <label for="rating">Rating: </label>
+    <input type="number" id="rating" name="rating" placeholder="Enter 0-9" min="0" max="9" required [(ngModel)]="rating">
+    <button (click)="ratingSearch()">Search</button>
+  </div>
   
-  <app-movie-list [movieList]="movieList" [searchQuery]="searchQuery" [year]="year"></app-movie-list>
+  <app-movie-list [movieList]="movieList" [searchQuery]="searchQuery" [year]="year" [rating]="rating"></app-movie-list>

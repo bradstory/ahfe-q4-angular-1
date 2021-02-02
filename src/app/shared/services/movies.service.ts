@@ -36,6 +36,12 @@ export class MoviesService {
       params: { api_key: this.apiKey, primary_release_year: year}
     });
   }
+  //This will give a list of movies that are greater than or equal to the rating given
+  searchRating(rating: string) {
+    return this.http.get('https://api.themoviedb.org/3/discover/movie?', {
+      params: { api_key: this.apiKey, 'vote_average.gte': rating }
+    })
+  }
 
   getMovieById(id: number) {
     return this.http.get(
