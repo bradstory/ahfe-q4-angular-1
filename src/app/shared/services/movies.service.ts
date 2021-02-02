@@ -31,6 +31,11 @@ export class MoviesService {
       params: { query: searchQuery, api_key: this.apiKey },
     });
   }
+  searchYear(year: string) {
+    return this.http.get('https://api.themoviedb.org/3/discover/movie?', {
+      params: { api_key: this.apiKey, primary_release_year: year}
+    });
+  }
 
   getMovieById(id: number) {
     return this.http.get(

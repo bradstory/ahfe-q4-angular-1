@@ -1,8 +1,13 @@
 <div class="container">
-    <label for="city">Search</label>
+    <label for="search">Search by Title: </label>
     <input type="text" id="search" name="search" required [(ngModel)]="searchQuery"/>
     <button (click)="searchResults()">Search</button>
     <!-- routerLink="/search" -->
   </div>
+  <div class="container">
+    <label for="year">Search by Release Year: </label>
+    <input type="number" id="year" name="year" placeholder="" required [(ngModel)]="year">
+    <button (click)="searchByYear()">Search</button>
+  </div>
   
-  <app-movie-list [movieList]="movieList" [searchQuery]="searchQuery"></app-movie-list>
+  <app-movie-list [movieList]="movieList" [searchQuery]="searchQuery" [year]="year"></app-movie-list>

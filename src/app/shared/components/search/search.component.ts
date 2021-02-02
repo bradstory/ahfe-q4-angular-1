@@ -9,6 +9,7 @@ import { MoviesService } from '../../services/movies.service';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
+  @Output() year: string = '';
   @Output() searchQuery: string = '';
   results: any;
   movies: any;
@@ -24,6 +25,12 @@ export class SearchComponent implements OnInit {
     });
   }
 
+  searchByYear() {
+    this.service.searchYear(this.year).subscribe((data: any) => {
+      this.movieList = data['results'];
+    })
+  }
+  
 
 
 

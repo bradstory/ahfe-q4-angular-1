@@ -12,6 +12,7 @@ import { MoviesService } from '../../services/movies.service';
 export class MovieListComponent implements OnInit {
   // listofmovies: Movie[] = [];
   favList: Movie[] = [];
+  @Input() year: string = '';
   @Input() searchQuery: string = '';
   @Input() movieList: Movie[] = [];
   constructor(private service: MoviesService, private router: Router) { }
