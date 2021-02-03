@@ -1,12 +1,62 @@
 /* Mobile View Styling */
-/* code here*/
+.movie-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    margin: 10px;
+}
 
+.movie-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    padding: 20px;
+}
+
+img {
+    width: 200px;
+    height: auto;
+    box-shadow: 10px 5px 5px gray;
+}
+
+i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.far {
+    font-size: 40px;
+    color: red;
+}
+
+.fas {
+    font-size: 40px;
+    color: red;
+}
+
+.title {
+    display: none;
+}
+
+.release-date {
+    display: none;
+}
+
+.rating {
+    display: none;
+}
 
 /* Desktop View Styling */
 @media screen and (min-width: 768px) {
 
     .movie-container {
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
         border: solid black 2px;
@@ -16,6 +66,8 @@
     .movie-text {
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
         width: 75%;
         padding: 20px;
     }

@@ -38,4 +38,10 @@ export class MovieListComponent implements OnInit {
     console.log(this.favList);
     
   }
+
+  toggleHeart(event: any) {
+    event.target.classList.toggle("fas");
+    event.target.classList.toggle("far");
+  }
 }
+
