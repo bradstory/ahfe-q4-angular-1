@@ -1,7 +1,8 @@
 <!-- <div class="containter-1"> -->
 <br>
 <div class="imagepath">
-  <img src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" class="image" />
+  <img *ngIf="movie.poster_path" src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" class="image" />
+  <img *ngIf="!movie.poster_path" src="https://pbs.twimg.com/media/EiSJzUnVoAYb5WI.jpg" alt="" class="image">
   <ul class="col-">
     <li class="title"><b>Title: </b><span>{{movie.title}}</span></li>
     <li class="tag"><b>Tagline: </b> {{movie.tagline}}</li>

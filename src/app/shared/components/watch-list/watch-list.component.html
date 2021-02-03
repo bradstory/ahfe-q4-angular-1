@@ -6,6 +6,7 @@
         <i class="fas fa-trash-alt" (click)= "removeMovie(movie)"></i>
     </div>
     <div class="movie-poster">
-        <img src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" alt="poster" [routerLink]="['/movie-list', movie.id]">
+        <img *ngIf="movie.poster_path" src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" alt="poster" [routerLink]="['/movie-list', movie.id]">
+        <img *ngIf="!movie.poster_path" src="https://pbs.twimg.com/media/EiSJzUnVoAYb5WI.jpg" alt="" class="image">
     </div>
 </div>
