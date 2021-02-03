@@ -1,26 +1,98 @@
-/* WILL COPY STYLING FROM MOVIE LIST WHEN COMPLETE */
-
 .movie-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     justify-content: space-between;
     align-items: center;
-    border: solid black 2px;
-    margin: 10px;
-}
-
-.movie-text {
+    margin-top: 30px;
+  }
+  
+  .movie-text {
     display: flex;
     flex-direction: column;
-    width: 75%;
-    padding: 20px;
-}
-
-.movie-poster {
-    padding: 20px;
-}
-
-img {
-    width: 200px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  img {
+    width: 300px;
     height: auto;
-}
+    box-shadow: 10px 5px 5px gray;
+    border-radius: 10px;
+  }
+  
+  i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .far {
+    font-size: 40px;
+    color: red;
+  }
+  
+  .fas {
+    font-size: 40px;
+    color: red;
+  }
+  
+  .title,
+  .release-date,
+  .rating {
+    display: none;
+  }
+  
+  .movie-poster {
+    margin-bottom: 10px;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .movie-container {
+      flex-direction: row;
+      background-color: rgb(243, 165, 243);
+      background-image: linear-gradient(to left, rgb(255, 0, 191) , rgb(0, 225, 255));
+      border-radius: 10px;
+    }
+  
+    .movie-text {
+      align-items: flex-start;
+      justify-content: flex-start;
+      width: 75%;
+      padding: 20px;
+    }
+  
+    .movie-poster {
+      padding: 20px;
+      margin: 0px;
+    }
+  
+    .far {
+      font-size: 40px;
+    }
+  
+    img {
+      width: 200px;
+      height: auto;
+      box-shadow: none;
+    }
+  
+    .title {
+      display: block;
+      font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    }
+  
+    .release-date {
+      display: block;
+      font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      font-style: italic;
+      font-weight: 100;
+    }
+  
+    .rating {
+      display: block;
+      font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      font-style: italic;
+      font-weight: 100;
+    }
+  }
+  
