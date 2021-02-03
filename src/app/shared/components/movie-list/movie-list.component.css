@@ -10,6 +10,7 @@
         justify-content: space-between;
         align-items: center;
         border: solid black 2px;
+        border-radius: 10px;
         margin: 10px;
     }
     
@@ -28,5 +29,27 @@
         width: 200px;
         height: auto;
     }
+    .far {
+        font-size: 40px;
+    }
 
+    .title {
+        display: block;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+    .release-date {
+        display: block;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-style: italic;
+        font-weight: 100;
+
+}
+
+    .rating {
+        display: block;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-style: italic;
+        font-weight: 100;
+}
 }
