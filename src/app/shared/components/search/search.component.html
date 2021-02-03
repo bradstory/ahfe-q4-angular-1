@@ -1,18 +1,22 @@
-<div class="container">
-    <label for="search">Title: </label>
-    <input type="text" id="search" name="search" required [(ngModel)]="searchQuery"/>
-    <button (click)="searchResults()">Search</button>
-    <!-- routerLink="/search" -->
-  </div>
+<div class="main-container">
+  <p>Search by...</p>
   <div class="container">
-    <label for="year">Release Year: </label>
-    <input type="number" id="year" name="year" placeholder="" required [(ngModel)]="year">
-    <button (click)="searchByYear()">Search</button>
+    <label for="search"></label>
+    <input type="text" id="search" name="search" placeholder="Title" required [(ngModel)]="searchQuery"/>
+    <button (click)="searchResults()"><i class="fas fa-search"></i></button>
   </div>
+
   <div class="container">
-    <label for="rating">Rating: </label>
-    <input type="number" id="rating" name="rating" placeholder="Enter 0-9" min="0" max="9" required [(ngModel)]="rating">
-    <button (click)="ratingSearch()">Search</button>
+    <label for="year"></label>
+    <input type="number" id="year" name="year" placeholder="Release Year" required [(ngModel)]="year">
+    <button (click)="searchByYear()"><i class="fas fa-search"></i></button>
+  </div>
+
+  <div class="container">
+    <label for="rating"></label>
+    <input type="number" id="rating" name="rating" placeholder="Rating 0-9" required [(ngModel)]="rating">
+    <button (click)="ratingSearch()"><i class="fas fa-search"></i></button>
   </div>
   
   <app-movie-list [movieList]="movieList" [searchQuery]="searchQuery" [year]="year" [rating]="rating"></app-movie-list>
+</div>
