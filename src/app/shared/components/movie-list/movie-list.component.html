@@ -3,7 +3,7 @@
     <h1 class="title">{{ movie.title }}</h1>
     <h2 class="release-date">Release Date: {{ movie.release_date }}</h2>
     <h2 class="rating">Rating: {{ movie.vote_average }}/10</h2>
-    <i class="far fa-heart" (click)="addToFavs(movie)"></i>
+     <i class="fas fa-heart" (click)="addToFavs(movie)">Add to watchlist</i>
   </div>
   <div class="movie-poster">
     <img src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" alt="poster" [routerLink]="['/movie-list', movie.id]">

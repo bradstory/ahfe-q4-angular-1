@@ -1,17 +1,21 @@
-<div class="containter">
+<div class="containter-1">
     <div class ="imagepath">
     <img
     src="https://image.tmdb.org/t/p/w185/{{ movie.poster_path }}"
     class="image" /></div>
-    <div class= "col-">
-        Title:{{movie.title}}
+    <ul class= "col-">
+     <li>Title:{{movie.title}}</li> 
+      <li>Tagline: {{movie.tagline}}</li>
+     <li>Overview: {{movie.overview}}</li> 
+      <li>Release Date:{{movie.release_date}}</li>
+      <li>Length:{{movie.runtime}}min</li>
+     <li>Vote Average:{{movie.vote_average}}</li> 
 
-       Tagline: <br>{{movie.tagline}}
-      Overview:<br>  {{movie.overview}}
-       </div>
-       <i class="fas fa-plus"></i>
+       </ul>
+    
+       <!-- <i class="fas fa-plus"></i>
       <button class = "watchlist">
-        Add to watchlist</button> 
+        Add to watchlist</button>  -->
     
 </div>
 

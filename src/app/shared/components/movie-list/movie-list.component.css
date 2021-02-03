@@ -1,9 +1,13 @@
 /* Mobile View Styling */
 /* code here*/
+.movie-container{
+    display:flex;
+    flex-direction:column;
+}
 
 
 /* Desktop View Styling */
-@media screen and (min-width: 768px) {
+@media  only screen and (min-width: 768px) {
 
     .movie-container {
         display: flex;
