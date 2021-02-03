@@ -21,6 +21,7 @@ img {
     width: 200px;
     height: auto;
     box-shadow: 10px 5px 5px gray;
+    border-radius:10px;
 }
 
 i {
@@ -39,18 +40,11 @@ i {
     color: red;
 }
 
-.title {
+.title,.release-date,.rating {
     display: none;
 }
 
-.release-date {
-    display: none;
-}
-
-.rating {
-    display: none;
-}
-
+ 
 /* Desktop View Styling */
 @media  only screen and (min-width: 768px) {
 
@@ -79,6 +73,12 @@ i {
     img {
         width: 200px;
         height: auto;
+
     }
+
+    .title,.release-date,.rating {
+        display: flex;
+    }
+    
 
 }
