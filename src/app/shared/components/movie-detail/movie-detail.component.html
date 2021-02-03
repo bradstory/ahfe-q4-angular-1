@@ -1,22 +1,19 @@
 <!-- <div class="containter-1"> -->
-  <br>
-    <div class ="imagepath">
-    <img
-    src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}"
-    class="image" />
-    <ul class= "col-">
-     <li class="title"><b>Title:</b><span>{{movie.title}}</span></li> 
-      <li class="tag"><b>Tagline:</b> {{movie.tagline}}</li>
-     <li class ="overview"><b>Overview:</b> <span>{{movie.overview}}</span></li> 
-      <li class="date"><b>Release Date:</b>{{movie.release_date}}</li>
-      <li class="length"><b>Length:</b>{{movie.runtime}}min</li>
-     <li class ="vote"><b>Vote Average:</b>{{movie.vote_average}}</li> 
+<br>
+<div class="imagepath">
+  <img src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" class="image" />
+  <ul class="col-">
+    <li class="title"><b>Title: </b><span>{{movie.title}}</span></li>
+    <li class="tag"><b>Tagline: </b> {{movie.tagline}}</li>
+    <li class="date"><b>Release Date: </b>{{movie.release_date}}</li>
+    <li class="length"><b>Length: </b>{{movie.runtime}}min</li>
+    <li class="vote"><b>Vote Average: </b>{{movie.vote_average}}/10</li>
+    <li class="overview"><b>Overview: </b><span>{{movie.overview}}</span></li>
 
-       </ul>
-    
-       <!-- <i class="fas fa-plus"></i>
+  </ul>
+
+  <!-- <i class="fas fa-plus"></i>
       <button class = "watchlist">
         Add to watchlist</button>  -->
-    
-</div>
 
+</div>
