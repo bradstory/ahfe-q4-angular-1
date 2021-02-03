@@ -4,12 +4,12 @@
   <img *ngIf="movie.poster_path" src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" class="image" />
   <img *ngIf="!movie.poster_path" src="https://pbs.twimg.com/media/EiSJzUnVoAYb5WI.jpg" alt="" class="image">
   <ul class="col-">
-    <li class="title"><b>Title: </b><span>{{movie.title}}</span></li>
-    <li class="tag"><b>Tagline: </b> {{movie.tagline}}</li>
-    <li class="date"><b>Release Date: </b>{{movie.release_date}}</li>
-    <li class="length"><b>Length: </b>{{movie.runtime}}min</li>
-    <li class="vote"><b>Rating: </b>{{movie.vote_average}}/10</li><br>
-    <li class="overview"><b>Overview: </b><span>{{movie.overview}}</span></li>
+    <li class="title"><b>Title:</b><span>{{movie.title}}</span></li>
+    <li class="tag"><b>Tagline:</b><span>{{movie.tagline}}</span></li>
+    <li class="date"><b>Release Date:</b><span>{{movie.release_date}}</span></li>
+    <li class="length"><b>Length:</b><span>{{movie.runtime}}</span>min</li>
+    <li class="vote"><b>Rating:</b><span>{{movie.vote_average}}/10</span></li><br>
+    <li class="overview"><b>Overview:</b><span>{{movie.overview}}</span></li>
 
   </ul>
 
