@@ -21,6 +21,7 @@ img {
     width: 200px;
     height: auto;
     box-shadow: 10px 5px 5px gray;
+    border-radius:10px;
 }
 
 i {
@@ -39,18 +40,11 @@ i {
     color: red;
 }
 
-.title {
+.title,.release-date,.rating {
     display: none;
 }
 
-.release-date {
-    display: none;
-}
-
-.rating {
-    display: none;
-}
-
+ 
 /* Desktop View Styling */
 @media  only screen and (min-width: 768px) {
 
@@ -60,6 +54,7 @@ i {
         justify-content: space-between;
         align-items: center;
         border: solid black 2px;
+        border-radius: 10px;
         margin: 10px;
     }
     
@@ -79,6 +74,29 @@ i {
     img {
         width: 200px;
         height: auto;
+
+    }
+    .far {
+        font-size: 40px;
     }
 
+    .title {
+        display: block;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+    .release-date {
+        display: block;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-style: italic;
+        font-weight: 100;
+
+}
+
+    .rating {
+        display: block;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-style: italic;
+        font-weight: 100;
+}
 }

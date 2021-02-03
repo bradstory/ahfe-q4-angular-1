@@ -1,15 +1,16 @@
-<div class="containter-1">
+<!-- <div class="containter-1"> -->
+  <br>
     <div class ="imagepath">
     <img
-    src="https://image.tmdb.org/t/p/w185/{{ movie.poster_path }}"
-    class="image" /></div>
+    src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}"
+    class="image" />
     <ul class= "col-">
-     <li>Title:{{movie.title}}</li> 
-      <li>Tagline: {{movie.tagline}}</li>
-     <li>Overview: {{movie.overview}}</li> 
-      <li>Release Date:{{movie.release_date}}</li>
-      <li>Length:{{movie.runtime}}min</li>
-     <li>Vote Average:{{movie.vote_average}}</li> 
+     <li class="title"><b>Title:</b><span>{{movie.title}}</span></li> 
+      <li class="tag"><b>Tagline:</b> {{movie.tagline}}</li>
+     <li class ="overview"><b>Overview:</b> <span>{{movie.overview}}</span></li> 
+      <li class="date"><b>Release Date:</b>{{movie.release_date}}</li>
+      <li class="length"><b>Length:</b>{{movie.runtime}}min</li>
+     <li class ="vote"><b>Vote Average:</b>{{movie.vote_average}}</li> 
 
        </ul>
     
