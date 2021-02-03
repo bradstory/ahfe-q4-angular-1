@@ -4,6 +4,7 @@ header {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    
  }
 
 div {
@@ -31,9 +32,10 @@ h2 {
 @media only screen and (min-width: 768px) {
 
     header {
-        height: 100px;
+        /* height: 100px; */
         flex-direction: row;
         padding: 10px;
+        
      }
 
      div {

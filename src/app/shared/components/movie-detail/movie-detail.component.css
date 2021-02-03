@@ -1,5 +1,5 @@
 .imagepath {
-  display: flex;
+  display: flexbox;
   justify-content: space-around;
   align-items: center;
   margin: 10px;
@@ -68,5 +68,5 @@ li {
 }
 
 span {
-  margin-left: 10px;
-}
+  padding-left: 10px;
+} 
