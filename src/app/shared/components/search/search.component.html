@@ -17,6 +17,6 @@
     <input type="number" id="rating" name="rating" placeholder="Rating 0-9" required [(ngModel)]="rating">
     <button (click)="ratingSearch()"><i class="fas fa-search"></i></button>
   </div>
-  
-  <app-movie-list [movieList]="movieList" [searchQuery]="searchQuery" [year]="year" [rating]="rating"></app-movie-list>
+
 </div>
+<app-movie-list [movieList]="movieList" [searchQuery]="searchQuery" [year]="year" [rating]="rating"></app-movie-list>

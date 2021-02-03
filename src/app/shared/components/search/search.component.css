@@ -1,17 +1,21 @@
 body{
     display: flex;
+    
 }
-img {
+/* img {
     height: 250px;
-}
+} */
 .main-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    
     
 }
 
 .container {
     padding-top: 3px;
+    
     
 }
 input {
@@ -24,13 +28,14 @@ button{
     padding-right: -50px;
 }
 @media screen and (min-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
     .main-container {
         flex-direction: row;
         justify-content: space-around;
-    }
+        height: 25px;
+    } 
 
-
-
-
-
-}    
+}
