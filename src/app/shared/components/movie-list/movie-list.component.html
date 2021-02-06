@@ -5,6 +5,7 @@
     <h2 class="rating">Rating: {{ movie.vote_average }}/10</h2>
     <i class="far fa-heart" (click)="addToFavs(movie)" (click)="toggleHeart($event)" ></i>
   </div>
+ 
   <div class="movie-poster" *ngIf="movie.poster_path">
     <img src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" alt="poster" [routerLink]="['/movie-list', movie.id]">
   </div>
