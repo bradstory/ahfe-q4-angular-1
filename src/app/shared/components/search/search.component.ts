@@ -2,6 +2,7 @@ import { Component, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { Movie } from '../../models/movie';
 import { MoviesService } from '../../services/movies.service';
+import { GenreList } from '../../models/genreList'
 
 @Component({
   selector: 'app-search',
@@ -9,12 +10,12 @@ import { MoviesService } from '../../services/movies.service';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-  @Output() rating: string = '';
-  @Output() year: string = '';
-  @Output() searchQuery: string = '';
-  results: any;
-  movies: any;
-  @Output() movieList: Movie[] = [];
+   rating: string = '';
+   year: string = '';
+   searchQuery: string = '';
+   filterGenre:string ='';
+   movieList: Movie[] = [];
+   genreList:GenreList[]=[];
   constructor(private service: MoviesService, private router:Router) { }
 
   searchResults() {
@@ -39,6 +40,17 @@ export class SearchComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.service.getGenres().subscribe((response:any) => {
+      this.genreList =response.genres; 
+    });
+  }
+
+  searchGenres() {
+   this.service.getAllGenres(this.filterGenre).subscribe((response: any)=>{
+   this.movieList = response['results'];
+    
+   }); 
+
   }
 
 }

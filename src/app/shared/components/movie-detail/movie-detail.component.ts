@@ -18,6 +18,8 @@ export class MovieDetailComponent implements OnInit {
     release_date: 0,
     vote_average:0,
     id:0,
+    genres_ids:[],
+    genres:[],
     runtime: 0,
     tagline: '',
     backdrop_path: '',

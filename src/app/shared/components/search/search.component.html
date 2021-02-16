@@ -17,6 +17,19 @@
     <input type="number" id="rating" name="rating" placeholder="Rating 0-9" required [(ngModel)]="rating">
     <button (click)="ratingSearch()"><i class="fas fa-search"></i></button>
   </div>
+  <div class ="container">
+  <label for="genre">Genre</label>
+      <select id="genre" name="genre" placeholder="Rating 0-9"  [(ngModel)]="filterGenre">
+        <option
+          *ngFor="let genre of genreList; let i = index" 
+          [ngValue]="genre.id">
+          {{ genre.name }}
+        </option>
+      </select>
+      <button (click)="searchGenres()"><i class="fas fa-search"></i></button>
+      </div>
 
 </div>
-<app-movie-list [movieList]="movieList" [searchQuery]="searchQuery" [year]="year" [rating]="rating"></app-movie-list>
+<!-- <app-movie-list [movieList]="movieList" [searchQuery]="searchQuery" [year]="year" [rating]="rating"></app-movie-list> -->
+
+<app-movie-list [movieList]="movieList"></app-movie-list>

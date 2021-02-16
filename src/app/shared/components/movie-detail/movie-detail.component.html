@@ -1,4 +1,4 @@
-<!-- <div class="containter-1"> -->
+
 <br>
 <div class="imagepath">
   <img *ngIf="movie.poster_path" src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" class="image" />
@@ -8,13 +8,9 @@
     <li class="tag"><b>Tagline:</b><span><i>{{movie.tagline}}</i></span></li>
     <li class="date"><b>Release Date:</b><span>{{movie.release_date}}</span></li>
     <li class="length"><b>Length:</b><span>{{movie.runtime}}</span>min</li>
+    <li class="topic"><b>Genres:</b>
+    <span class="genre" *ngFor = " let genre of movie.genres;index as i">{{i+1}}.{{genre.name}}</span></li>
     <li class="vote"><b>Rating:</b><span>{{movie.vote_average}}/10</span></li><br>
     <li class="overview"><b>Overview:</b><span>{{movie.overview}}</span></li>
-
   </ul>
-
-  <!-- <i class="fas fa-plus"></i>
-      <button class = "watchlist">
-        Add to watchlist</button>  -->
-
 </div>
